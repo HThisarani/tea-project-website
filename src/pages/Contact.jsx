@@ -4,23 +4,23 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
-// eslint-disable-next-line no-unused-vars
-const [focused, setFocused] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [focused, setFocused] = useState(null);
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
   const handleSubmit = e => { e.preventDefault(); setSubmitted(true); };
 
   const contactInfo = [
-    { icon: '✉️', label: 'Email', value: 'teaproject@university.ac.lk', href: 'mailto:teaproject@university.ac.lk' },
-    { icon: '📞', label: 'Phone', value: '+94 11 000 0000', href: 'tel:+94110000000' },
+    { icon: '✉️', label: 'Email', value: 'teanexusteamanagement@gmail.com', href: 'mailto:teaproject@university.ac.lk' },
+    { icon: '📞', label: 'Phone', value: '+9475111761', href: 'tel:+94110000000' },
     { icon: '🏫', label: 'Faculty', value: 'Faculty of Computing, SLIIT', href: null },
     { icon: '📍', label: 'Location', value: 'Malabe, Sri Lanka', href: null },
   ];
 
   return (
-    <div style={{ background: '#0a0d0f', minHeight: '100vh', fontFamily: "'DM Sans', sans-serif" }}>
+    <div style={{ background: '#09090b', minHeight: '100vh', fontFamily: "'Inter', sans-serif" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:ital,wght@0,300;0,600;0,700;1,300;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         .contact-grid {
@@ -44,25 +44,25 @@ const [focused, setFocused] = useState(null);
           font-weight: 700;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #4ade80;
+          color: #34d399;
         }
 
         .field-input {
           background: rgba(255,255,255,0.04);
           border: 1.5px solid rgba(255,255,255,0.08);
-          border-radius: 10px;
+          border-radius: 20px;
           padding: 0.85rem 1rem;
-          color: #fff;
-          font-family: 'DM Sans', sans-serif;
+          color: #fafafa;
+          font-family: 'Inter', sans-serif;
           font-size: 0.92rem;
           width: 100%;
           outline: none;
           transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
           -webkit-appearance: none;
         }
-        .field-input::placeholder { color: #3d5248; }
+        .field-input::placeholder { color: #71717a; }
         .field-input:focus {
-          border-color: #16a34a;
+          border-color: #10b981;
           background: rgba(22,163,74,0.06);
           box-shadow: 0 0 0 3px rgba(22,163,74,0.1);
         }
@@ -73,12 +73,12 @@ const [focused, setFocused] = useState(null);
         }
 
         .submit-btn {
-          background: #16a34a;
-          color: #fff;
+          background: #10b981;
+          color: #fafafa;
           border: none;
           padding: 1rem 2rem;
-          border-radius: 10px;
-          font-family: 'DM Sans', sans-serif;
+          border-radius: 20px;
+          font-family: 'Inter', sans-serif;
           font-size: 0.95rem;
           font-weight: 700;
           cursor: pointer;
@@ -102,8 +102,8 @@ const [focused, setFocused] = useState(null);
           gap: 1rem;
           padding: 1rem 1.2rem;
           background: rgba(255,255,255,0.03);
-          border: 1px solid rgba(255,255,255,0.06);
-          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,0.03);
+          border-radius: 16px;
           transition: border-color 0.2s, background 0.2s;
           text-decoration: none;
         }
@@ -115,7 +115,7 @@ const [focused, setFocused] = useState(null);
         .section-label {
           font-size: 0.68rem;
           font-weight: 700;
-          color: #16a34a;
+          color: #10b981;
           letter-spacing: 0.14em;
           text-transform: uppercase;
           margin-bottom: 0.5rem;
@@ -145,12 +145,12 @@ const [focused, setFocused] = useState(null);
             display: 'inline-flex', alignItems: 'center', gap: 7,
             background: 'rgba(134,239,172,0.1)',
             border: '1px solid rgba(134,239,172,0.25)',
-            color: '#86efac',
+            color: '#6ee7b7',
             fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em',
             padding: '0.28rem 1rem', borderRadius: 20, marginBottom: '1.4rem',
           }}
         >
-          <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#4ade80', display: 'inline-block', boxShadow: '0 0 5px #4ade80' }} />
+          <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#34d399', display: 'inline-block', boxShadow: '0 0 5px #34d399' }} />
           GET IN TOUCH
         </motion.div>
 
@@ -158,9 +158,9 @@ const [focused, setFocused] = useState(null);
           className="hero-title"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}
           style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Plus Jakarta Sans', serif",
             fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
-            color: '#fff',
+            color: '#fafafa',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             fontWeight: 600,
@@ -168,7 +168,7 @@ const [focused, setFocused] = useState(null);
           }}
         >
           Contact the<br />
-          <em style={{ color: '#4ade80', fontStyle: 'italic' }}>TeaNexus Team</em>
+          <em style={{ color: '#34d399', fontStyle: 'italic' }}>TeaNexus Team</em>
         </motion.h1>
 
         <motion.p
@@ -189,9 +189,9 @@ const [focused, setFocused] = useState(null);
           >
             <div className="section-label">01 — Info</div>
             <h2 style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Plus Jakarta Sans', serif",
               fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
-              color: '#fff',
+              color: '#fafafa',
               fontWeight: 600,
               marginBottom: '0.9rem',
               letterSpacing: '-0.01em',
@@ -221,7 +221,7 @@ const [focused, setFocused] = useState(null);
                     {item.icon}
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.67rem', fontWeight: 700, color: '#4ade80', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 2 }}>{item.label}</div>
+                    <div style={{ fontSize: '0.67rem', fontWeight: 700, color: '#34d399', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 2 }}>{item.label}</div>
                     <div style={{ fontSize: '0.88rem', color: '#d1d5db' }}>{item.value}</div>
                   </div>
                 </motion.a>
@@ -229,7 +229,7 @@ const [focused, setFocused] = useState(null);
             </div>
 
             {/* decorative divider */}
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.4rem' }}>
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.03)', paddingTop: '1.4rem' }}>
               <div style={{ fontSize: '0.75rem', color: '#374151', lineHeight: 1.7 }}>
                 Project 25-26J-193 · SLIIT Faculty of Computing<br />
                 Smarter Tea Production for Sri Lanka 🍃
@@ -242,7 +242,7 @@ const [focused, setFocused] = useState(null);
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.6 }}
             style={{
               background: 'rgba(255,255,255,0.03)',
-              border: '1.5px solid rgba(255,255,255,0.07)',
+              border: '1.5px solid rgba(255,255,255,0.05)',
               borderRadius: 18,
               padding: 'clamp(1.5rem,4vw,2.2rem)',
             }}
@@ -254,15 +254,15 @@ const [focused, setFocused] = useState(null);
               >
                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
                 <h3 style={{
-                  fontFamily: "'Fraunces', serif",
-                  color: '#fff', fontSize: '1.5rem', marginBottom: '0.6rem', fontWeight: 600,
+                  fontFamily: "'Plus Jakarta Sans', serif",
+                  color: '#fafafa', fontSize: '1.5rem', marginBottom: '0.6rem', fontWeight: 600,
                 }}>Message Sent!</h3>
                 <p style={{ color: '#6b7280', fontSize: '0.9rem', lineHeight: 1.7 }}>
                   Thanks for reaching out. We'll get back to you as soon as possible.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
-                  style={{ marginTop: '1.5rem', background: 'transparent', border: '1.5px solid rgba(22,163,74,0.4)', color: '#4ade80', padding: '0.6rem 1.4rem', borderRadius: 8, cursor: 'pointer', fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', touchAction: 'manipulation' }}
+                  style={{ marginTop: '1.5rem', background: 'transparent', border: '1.5px solid rgba(22,163,74,0.4)', color: '#34d399', padding: '0.6rem 1.4rem', borderRadius: 8, cursor: 'pointer', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', touchAction: 'manipulation' }}
                 >
                   Send another →
                 </button>

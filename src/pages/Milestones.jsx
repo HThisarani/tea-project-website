@@ -16,7 +16,7 @@ const milestones = [
 
 export default function Timeline() {
   return (
-    <div style={{ position:'relative', minHeight:'100vh', fontFamily:"'DM Sans',sans-serif" }}>
+    <div style={{ position:'relative', minHeight:'100vh', fontFamily:"'Inter',sans-serif" }}>
 
       {/* BACKGROUND */}
       <div style={{
@@ -48,8 +48,8 @@ export default function Timeline() {
 
         {/* HEADER */}
         <div style={{ textAlign:'center', marginBottom:'3rem' }}>
-          <div style={{ color:'#22c55e', fontSize:'12px' }}>PROJECT JOURNEY</div>
-          <h1 style={{ color:'#fff', margin:0 }}>Timeline Overview</h1>
+          <div style={{ color:'#10b981', fontSize:'12px' }}>PROJECT JOURNEY</div>
+          <h1 style={{ color:'#fafafa', margin:0 }}>Timeline Overview</h1>
         </div>
 
         {/* TIMELINE */}
@@ -103,16 +103,16 @@ export default function Timeline() {
                     marginLeft: isLeft ? '12px' : '0',
                     width:'12px',
                     height:'12px',
-                    background:'#22c55e',
+                    background:'#10b981',
                     borderRadius:'50%',
-                    boxShadow:'0 0 8px #22c55e'
+                    boxShadow:'0 0 8px #10b981'
                   }}/>
 
                   {/* DATE */}
                   <div style={{
                     fontSize:'11px',
                     background:'#000',
-                    color:'#fff',
+                    color:'#fafafa',
                     display:'inline-block',
                     padding:'3px 8px',
                     marginBottom:'8px'
@@ -122,7 +122,7 @@ export default function Timeline() {
 
                   {/* TITLE */}
                   <div style={{
-                    color:'#fff',
+                    color:'#fafafa',
                     fontWeight:600,
                     fontSize:'16px'   // 🔥 bigger text
                   }}>
@@ -131,7 +131,7 @@ export default function Timeline() {
 
                   {/* DESC */}
                   <div style={{
-                    color:'#9bbfa6',
+                    color:'#a1a1aa',
                     fontSize:'13px',
                     margin:'8px 0'
                   }}>
@@ -156,7 +156,7 @@ export default function Timeline() {
                       transition={{duration:0.6}}
                       style={{
                         height:'100%',
-                        background:'#22c55e'
+                        background:'#10b981'
                       }}
                     />
                   </div>

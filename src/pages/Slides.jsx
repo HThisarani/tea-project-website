@@ -8,7 +8,7 @@ const CSS = `
   }
   .slides-hero-title {
     font-size: 2.8rem;
-    color: #fff;
+    color: #fafafa;
     margin-bottom: 10px;
   }
   .slides-btn-row {
@@ -30,11 +30,11 @@ const CSS = `
   .slides-btn:hover { opacity: 0.75; }
   .slides-btn-view {
     background: rgba(74,222,128,0.12);
-    color: #4ade80;
+    color: #34d399;
   }
   .slides-btn-download {
-    background: #22c55e;
-    color: #0a0f0d;
+    background: #10b981;
+    color: #09090b;
   }
   @media (max-width: 700px) {
     .slides-grid { grid-template-columns: 1fr; }
@@ -110,18 +110,20 @@ export default function Slides() {
       <style>{CSS}</style>
 
       <div style={hero}>
-        <div style={container}>
-          <h1 className="slides-hero-title">Presentations</h1>
-          <p style={sub}>
-            Please find all presentations related to this project below.
-          </p>
+        <div style={heroInner}>
+          <div style={container}>
+            <h1 className="slides-hero-title">Presentations</h1>
+            <p style={sub}>
+              Please find all presentations related to this project below.
+            </p>
+          </div>
         </div>
       </div>
 
       <div style={mainContent}>
         <div className="slides-grid">
           {slides.map((slide, i) => (
-            <div key={i} id={slide.id} style={card}>
+            <div key={i} id={slide.id} style={card} className="glb-card">
 
               <div>
                 <div style={cardTitle}>{slide.title}</div>
@@ -165,13 +167,21 @@ export default function Slides() {
 }
 
 const page = {
-  background: '#0a0f0d',
+  background: '#09090b',
   minHeight: '100vh',
-  fontFamily: 'sans-serif'
+  fontFamily: 'sans-serif',
+  position: 'relative',
 };
 
 const hero = {
-  padding: '3rem 1.5rem 2rem'
+  position: 'relative',
+  overflow: 'hidden',
+};
+
+const heroInner = {
+  position: 'relative',
+  padding: '3rem 1.5rem 2rem',
+  background: 'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(34,197,94,0.07), transparent 70%)',
 };
 
 const container = {
@@ -180,7 +190,7 @@ const container = {
 };
 
 const sub = {
-  color: '#9bbfa6',
+  color: '#a1a1aa',
   fontSize: '1.1rem'
 };
 
@@ -191,9 +201,9 @@ const mainContent = {
 };
 
 const card = {
-  background: '#131a16',
+  background: '#18181b',
   border: '1px solid rgba(255,255,255,0.08)',
-  borderRadius: 12,
+  borderRadius: 16,
   padding: '1.8rem',
   minHeight: '200px',
   display: 'flex',
@@ -202,19 +212,19 @@ const card = {
 };
 
 const cardTitle = {
-  color: '#ffffff',
+  color: '#fafafa',
   fontSize: '1.5rem',
   fontWeight: 600
 };
 
 const cardDesc = {
-  color: '#b7d3bf',
+  color: '#a1a1aa',
   fontSize: '1.05rem',
   marginTop: '10px'
 };
 
 const groupText = {
-  color: '#ffffff',
+  color: '#fafafa',
   fontWeight: 500
 };
 

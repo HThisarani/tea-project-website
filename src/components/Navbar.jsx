@@ -60,7 +60,7 @@ const CSS = `
     background: rgba(10,15,13,0.95);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
   .tn-nav.scrolled {
     box-shadow: 0 4px 25px rgba(0,0,0,0.6);
@@ -68,10 +68,10 @@ const CSS = `
 
   /* ── Top bar ── */
   .tn-inner {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
-    height: 62px;
+    padding: 0 2.5rem;
+    height: 68px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,12 +81,12 @@ const CSS = `
   .tn-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     cursor: pointer;
     flex-shrink: 0;
   }
-  .tn-brand-name { color: #fff; font-weight: 600; font-size: 15.5px; }
-  .tn-brand-id   { color: #4ade80; font-size: 10px; }
+  .tn-brand-name { color: #fafafa; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .tn-brand-id   { color: #34d399; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; }
 
   /* ── Desktop links ── */
   .tn-links {
@@ -98,17 +98,34 @@ const CSS = `
   .tn-btn {
     background: none;
     border: none;
-    color: #86a88e;
-    font-size: 13.8px;
+    color: #a1a1aa;
+    font-size: 14px;
     padding: 10px 18px;
     border-radius: 9px;
     cursor: pointer;
     white-space: nowrap;
+    font-weight: 500;
     font-family: inherit;
-    transition: color 0.2s, background 0.2s;
+    transition: all 0.2s ease;
+    position: relative;
   }
-  .tn-btn:hover  { color: #fff; background: rgba(255,255,255,0.07); }
-  .tn-btn.active { color: #4ade80; background: rgba(74,222,128,0.12); }
+  .tn-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #10b981;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+  }
+  .tn-btn:hover { color: #fafafa; }
+  .tn-btn:hover::after { width: 40%; }
+  .tn-btn.active { color: #10b981; background: rgba(16, 185, 129, 0.08); font-weight: 600; }
+  .tn-btn.active::after { width: 60%; }
 
   /* ── Desktop dropdown ── */
   .tn-item { position: relative; }
@@ -117,15 +134,17 @@ const CSS = `
     position: absolute;
     top: 100%; left: 0;
     margin-top: 8px;
-    background: #111e15;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(14, 22, 16, 0.95) 0%, rgba(10, 15, 12, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(74, 222, 128, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
     padding: 8px 0;
     min-width: 220px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.25s;
     z-index: 100;
   }
   .tn-item:hover .tn-dropdown {
@@ -136,14 +155,15 @@ const CSS = `
 
   .tn-drop-item {
     padding: 11px 20px;
-    color: #86a88e;
+    color: #a1a1aa;
     cursor: pointer;
     font-size: 13.5px;
-    transition: background 0.15s, color 0.15s;
+    transition: all 0.2s;
   }
   .tn-drop-item:hover {
-    background: rgba(74,222,128,0.15);
-    color: #4ade80;
+    background: rgba(74,222,128,0.1);
+    color: #34d399;
+    padding-left: 24px;
   }
 
   /* ── Hamburger button ── */
@@ -163,19 +183,19 @@ const CSS = `
     transition: background 0.2s;
     flex-shrink: 0;
   }
-  .tn-hamburger:hover { background: rgba(255,255,255,0.07); }
+  .tn-hamburger:hover { background: rgba(255,255,255,0.05); }
 
   .tn-bar {
     width: 22px;
     height: 2px;
-    background: #86a88e;
+    background: #a1a1aa;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
   }
-  .tn-hamburger.open .tn-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #4ade80; }
+  .tn-hamburger.open .tn-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #34d399; }
   .tn-hamburger.open .tn-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .tn-hamburger.open .tn-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #4ade80; }
+  .tn-hamburger.open .tn-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #34d399; }
 
   /* ── Mobile drawer ── */
   .tn-mobile-menu {
@@ -183,7 +203,7 @@ const CSS = `
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
-    border-top: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
   .tn-mobile-menu.open {
     max-height: 85vh;
@@ -208,7 +228,7 @@ const CSS = `
     flex: 1;
     background: none;
     border: none;
-    color: #86a88e;
+    color: #a1a1aa;
     font-size: 14px;
     padding: 11px 12px;
     border-radius: 9px;
@@ -217,22 +237,22 @@ const CSS = `
     font-family: inherit;
     transition: color 0.2s, background 0.2s;
   }
-  .tn-m-btn:hover  { color: #fff; background: rgba(255,255,255,0.06); }
-  .tn-m-btn.active { color: #4ade80; }
+  .tn-m-btn:hover  { color: #fafafa; background: rgba(255,255,255,0.03); }
+  .tn-m-btn.active { color: #34d399; }
 
   .tn-m-chevron {
     background: none;
     border: none;
     cursor: pointer;
-    color: #86a88e;
+    color: #a1a1aa;
     padding: 8px 10px;
     border-radius: 8px;
     font-size: 12px;
     transition: transform 0.25s ease, color 0.2s;
     line-height: 1;
   }
-  .tn-m-chevron:hover { color: #4ade80; }
-  .tn-m-chevron.open  { transform: rotate(180deg); color: #4ade80; }
+  .tn-m-chevron:hover { color: #34d399; }
+  .tn-m-chevron.open  { transform: rotate(180deg); color: #34d399; }
 
   /* Mobile sub-items */
   .tn-m-sub {
@@ -253,7 +273,7 @@ const CSS = `
     border-left: 1px solid rgba(74,222,128,0.15);
     margin: 1px 0;
   }
-  .tn-m-sub-item:hover { color: #4ade80; background: rgba(74,222,128,0.08); }
+  .tn-m-sub-item:hover { color: #34d399; background: rgba(74,222,128,0.08); }
 
   /* ── Active section highlight ── */
   .tn-active-section {
@@ -326,7 +346,15 @@ export default function Navbar({ currentPage, setCurrentPage }) {
 
           {/* Brand */}
           <div className="tn-brand" onClick={() => navigate('home')}>
-            <span style={{ fontSize: 22 }}>🍃</span>
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: '38px', height: '38px', borderRadius: '10px',
+              background: '#ffffff',
+              boxShadow: '0 4px 12px rgba(255, 255, 255, 0.15)',
+              fontSize: '26px'
+            }}>
+              🍃
+            </div>
             <div>
               <div className="tn-brand-name">TeaNexus</div>
               <div className="tn-brand-id">25-26J-193</div>
