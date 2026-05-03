@@ -454,7 +454,7 @@ Automated IoT weighing at both leaf intake and powder output stations, a Gradien
               <div style={{ marginTop:'1rem', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(190px,1fr))', gap:'0.65rem' }}>
                 {[
                   { color:'#4ade80', label:'① Yield Prediction & Traceability', desc:'ESP32 IoT + Gradient Boosting (R²=0.886)' },
-                  { color:'#fbbf24', label:'② Smart Belt Monitoring', desc:'ESP32 IoT + Random Forest + RUL' },
+                 { color:'#fbbf24', label:'② Smart Belt Monitoring', desc:'Random Forest (Risk + RUL Estimation)' },
                   { color:'#60a5fa', label:'③ Disease Detection & Advisory', desc:'EfficientNet-B0 CNN + Weather API' },
                   { color:'#c084fc', label:'④ Quality Optimisation', desc:'Historical ML — no IoT required' },
                 ].map((item, i) => (
