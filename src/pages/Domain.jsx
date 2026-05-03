@@ -93,28 +93,19 @@ function SystemDiagram() {
         <text x="36" y="171" fill="#86efac" fontSize="9">• Cause-specific recommendation engine</text>
         <text x="36" y="187" fill="#71717a" fontSize="8.5">Accuracy: 91.4% yield classification</text>
  
-        {/* Component 2 — top-right */}
-        <rect x="705" y="20" width="235" height="180" rx="12" fill="#1c1410" stroke="rgba(251,191,36,0.35)" strokeWidth="1" />
-        <rect x="705" y="20" width="235" height="38" rx="12" fill="rgba(234,179,8,0.12)" />
-        <rect x="705" y="46" width="235" height="12" fill="rgba(234,179,8,0.12)" />
-        <text x="822" y="42" textAnchor="middle" fill="#fbbf24" fontSize="10" fontWeight="700">② SMART BELT MONITORING</text>
-       <text x="721" y="75" fill="#fde68a" fontSize="9">
-  • Random Forest (classification + RUL)
-</text>
-<text x="721" y="91" fill="#fde68a" fontSize="9">
-  • Inputs: wear, crack, load, hours, temp, humidity
-</text>
-        <text x="721" y="107" fill="#fde68a" fontSize="9">
-  • Predicts risk (Low / Medium / High / Failed)
-</text>
-        <text x="721" y="123" fill="#fde68a" fontSize="9">• Estimates Remaining Useful Life (RUL)</text>
-        <text x="721" y="139" fill="#fde68a" fontSize="9">
-  • Learns relationships between parameters
-</text>
-        <text x="721" y="155" fill="#fde68a" fontSize="9">• Supports data-driven predictive maintenance</text>
-        <text x="721" y="171" fill="#fde68a" fontSize="9">• Real-time push alerts → mobile app</text>
-        <text x="721" y="187" fill="#71717a" fontSize="8.5">Continuous monitoring, zero manual steps</text>
- 
+       {/* Component 2 — top-right */}
+<rect x="705" y="20" width="235" height="180" rx="12" fill="#1c1410" stroke="rgba(251,191,36,0.35)" strokeWidth="1" />
+<rect x="705" y="20" width="235" height="38" rx="12" fill="rgba(234,179,8,0.12)" />
+<rect x="705" y="46" width="235" height="12" fill="rgba(234,179,8,0.12)" />
+<text x="822" y="42" textAnchor="middle" fill="#fbbf24" fontSize="10" fontWeight="700">② SMART BELT MONITORING</text>
+<text x="721" y="75" fill="#fde68a" fontSize="9">• Random Forest (classification + RUL)</text>
+<text x="721" y="91" fill="#fde68a" fontSize="9">• Inputs: wear, crack, load, hours, temp, humidity</text>
+<text x="721" y="107" fill="#fde68a" fontSize="9">• Risk levels: Low / Medium / High / Failed</text>
+<text x="721" y="123" fill="#fde68a" fontSize="9">• Estimates Remaining Useful Life (RUL)</text>
+<text x="721" y="139" fill="#fde68a" fontSize="9">• Multi-parameter degradation analysis</text>
+<text x="721" y="155" fill="#fde68a" fontSize="9">• Proactive maintenance planning</text>
+<text x="721" y="171" fill="#fde68a" fontSize="9">• Real-time push alerts → mobile app</text>
+<text x="721" y="187" fill="#71717a" fontSize="8.5">Continuous monitoring, zero manual steps</text>
         {/* Component 3 — bottom-left */}
         <rect x="20" y="400" width="235" height="180" rx="12" fill="#0d1520" stroke="rgba(96,165,250,0.35)" strokeWidth="1" />
         <rect x="20" y="400" width="235" height="38" rx="12" fill="rgba(59,130,246,0.12)" />
@@ -156,9 +147,9 @@ function SystemDiagram() {
         <rect x="264" y="96" width="52" height="16" rx="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.3)" strokeWidth="0.8" />
         <text x="290" y="108" textAnchor="middle" fill="#4ade80" fontSize="8" fontWeight="600">IoT Data</text>
  
-        <rect x="645" y="96" width="52" height="16" rx="4" fill="rgba(251,191,36,0.15)" stroke="rgba(251,191,36,0.3)" strokeWidth="0.8" />
-        <text x="671" y="108" textAnchor="middle" fill="#fbbf24" fontSize="8" fontWeight="600">IoT Data</text>
- 
+        <rect x="610" y="92" width="86" height="20" rx="5" fill="rgba(251,191,36,0.15)" stroke="rgba(251,191,36,0.3)" strokeWidth="0.8" />
+<text x="655" y="106" textAnchor="middle" fill="#fbbf24" fontSize="8" fontWeight="600">Model Input Data</text>
+        
         <rect x="262" y="477" width="60" height="16" rx="4" fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.3)" strokeWidth="0.8" />
         <text x="292" y="489" textAnchor="middle" fill="#60a5fa" fontSize="8" fontWeight="600">Image+GPS</text>
  
