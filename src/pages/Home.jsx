@@ -359,7 +359,7 @@ export default function Home({ setCurrentPage }) {
                 WebkitTextFillColor: 'transparent',
                 display: 'inline-block'
               }}>Tea Manufacturing</span><br />
-              with Explainable AI
+              with Intelligent Systems
             </motion.h1>
 
             <motion.p
