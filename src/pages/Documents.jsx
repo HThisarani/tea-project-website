@@ -128,11 +128,18 @@ const documents = [
       }
     ]
   },
-  {
+ {
     id: 'pp2-checklist',
     title: 'Checklist 2',
-    desc: 'April 30, 2026 (Yet to be submitted)',
-    status: 'Pending'
+    desc: 'April 30, 2026',
+    status: 'Available',
+    files: [
+      {
+        url: 'https://docs.google.com/spreadsheets/d/1TSc6PSw_IdkxDuB103rB1CstT5CuB6Yk/export?format=xlsx',
+        viewUrl: 'https://docs.google.com/spreadsheets/d/1TSc6PSw_IdkxDuB103rB1CstT5CuB6Yk/edit?usp=sharing',
+        label: 'Checklist Sheet'
+      }
+    ]
   },
   {
     id: 'research-paper',
