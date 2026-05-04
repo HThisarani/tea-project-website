@@ -395,7 +395,7 @@ export default function Home({ setCurrentPage }) {
           >
             {[
               { label: 'Leaf Quality Score', value: '94.2%',  sub: 'AI classification accuracy',  accent: '#10b981' },
-              { label: 'Soil Moisture',       value: '68%',    sub: 'Real-time IoT reading',        accent: '#2563eb' },
+              { label: 'Yield R² Score', value: '0.886', sub: 'Gradient Boosting accuracy', accent: '#2563eb' },
               { label: 'Belt Condition',      value: 'Normal', sub: 'No fault detected — live',     accent: '#7c3aed' },
               { label: 'Disease Detected',    value: '0',      sub: 'Last 7-day scan result',       accent: '#d97706' },
             ].map((c, i) => (
