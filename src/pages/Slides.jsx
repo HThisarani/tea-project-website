@@ -73,10 +73,10 @@ const slides = [
   {
     id: 'final-slide',
     title: 'Final Presentation',
-    date: 'Yet to be submitted, link will be updated soon.',
-    status: 'Pending',
-    viewUrl: '',
-    downloadUrl: '',
+    date: 'May 2026',
+    status: 'Available',
+    viewUrl:     'https://docs.google.com/presentation/d/11pv3h3RduBk5ZCKWLUH6dbitTOijJfWu/present',
+    downloadUrl: 'https://docs.google.com/presentation/d/11pv3h3RduBk5ZCKWLUH6dbitTOijJfWu/export/pptx',
   },
 ];
 
