@@ -142,15 +142,14 @@ const documents = [
     ]
   },
   {
-    id: 'research-paper',
-    title: 'Research Paper',
-    desc: 'May 8, 2026 (Submitted)',
-    status: 'Available',
-    files: [
-      { url: 'https://drive.google.com/uc?export=download&id=15QP3VfQvtfX7kihXvdJyXaWKH35EB8ya', label: 'Download' },
-      { url: 'https://drive.google.com/file/d/15QP3VfQvtfX7kihXvdJyXaWKH35EB8ya/view', label: 'View' }
-    ]
-  },
+  id: 'research-paper',
+  title: 'Research Paper',
+  desc: 'May 8, 2026 (Submitted)',
+  status: 'Available',
+  url: 'https://drive.google.com/uc?export=download&id=15QP3VfQvtfX7kihXvdJyXaWKH35EB8ya',
+  viewUrl: 'https://drive.google.com/file/d/15QP3VfQvtfX7kihXvdJyXaWKH35EB8ya/view'
+},
+
   {
     id: 'final-report',
     title: 'Final Report (Group)',
