@@ -352,14 +352,14 @@ export default function Home({ setCurrentPage }) {
                 letterSpacing: '-0.02em'
               }}
             >
-              Empowering Next-Gen<br />
+              Enhancing Tea Production <br />
               <span style={{
                 background: 'linear-gradient(to right, #6ee7b7, #10b981)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 display: 'inline-block'
-              }}>Tea Manufacturing</span><br />
-              with Intelligent Systems
+              }}>Using AI and IoT </span><br />
+              Technologies
             </motion.h1>
 
             <motion.p
